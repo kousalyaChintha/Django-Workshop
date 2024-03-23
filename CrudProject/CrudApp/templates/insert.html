@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Insertion page</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+   <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+<body>
+    
+    <div class="container card card-header mt-5 bg-danger col-md-5">
+        <div class="card card-body bg-info clr">
+        <h2 class="text-center bg-warning"> Student Registration Form</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" name="uname"placeholder="Enter your name"
+                class="form-control my-4">
+            </div>
+            <div class="form-group">
+                <input type="text" name="roll"placeholder="Enter your roll number"
+                class="form-control my-4">
+            </div>
+            <div class="form-group">
+                <input type="number" name="age"placeholder="Enter your age"
+                class="form-control my-4">
+            </div>
+            <div class="form-group">
+                <input type="number" name="mbl"placeholder="Enter your mobile number"
+                class="form-control my-4">
+            </div>
+            <div class="form-group">
+                <input type="email" name="email"placeholder="Enter your email address"
+                class="form-control my-4">
+            </div>
+            <div class="form-group">
+                <input type="text" name="addr" placeholder="Enter your address"
+                class="form-control my-4">
+            </div>
+            <div class="text-center">
+                <input type="Submit" name="Register" value="Register" class="btn btn-success">
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
